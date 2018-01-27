@@ -1,6 +1,23 @@
 body {
     margin: 0;
     background-color: rgb(224, 120, 48); /* #ed7011 */
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Saddlebag';
+    position: absolute;
+    z-index: 1;
+    font-size: 8vw;
+    color: white;
+    padding-top: 2vw;
+    padding-left: 4vw;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Saddlebag';
+    src: url('../fonts/Saddlebag.ttf');
 }
 
 .scenery {
@@ -20,18 +37,28 @@ body {
     transform: translate(0, -100%);
 }
 
-h1 {
-    font-family: 'Saddlebag';
-    position: absolute;
+#train {
     z-index: 1;
-    font-size: 8vw;
-    color: white;
-    padding-top: 2vw;
-    padding-left: 4vw;
-    margin: 0;
+    position: absolute;
+    top: 100vh;
+
+    animation-name: leftToRight;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
-@font-face {
-    font-family: 'Saddlebag';
-    src: url('../fonts/Saddlebag.ttf');
+#train img {
+    position: absolute;
+    width: 50vw;
+    transform: translate(0, -110%);
+}
+
+@keyframes leftToRight {
+    from {
+        transform: translate(-100vw, -100%);
+    }
+    to {
+        transform: translate(100vw, -100%);
+    }
 }
