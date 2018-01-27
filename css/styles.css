@@ -3,9 +3,21 @@ body {
     background-color: rgb(224, 120, 48); /* #ed7011 */
 }
 
-img {
+.scenery {
     width: 100vw;
     position: absolute;
+}
+
+.cloud {
+    position: absolute;
+    left: 18vw;
+    top: 8vw;
+}
+
+#tracks {
+    top: 100vh;
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
 }
 
 h1 {
