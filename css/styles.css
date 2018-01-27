@@ -12,9 +12,11 @@ h1 {
     font-family: 'Saddlebag';
     position: absolute;
     z-index: 1;
-    font-size: 6em;
-    padding-left: 20px;
+    font-size: 8vw;
     color: white;
+    padding-top: 2vw;
+    padding-left: 4vw;
+    margin: 0;
 }
 
 @font-face {
