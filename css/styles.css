@@ -1,8 +1,23 @@
 body {
     margin: 0;
+    background-color: rgb(224, 120, 48); /* #ed7011 */
 }
 
 img {
     width: 100vw;
     position: absolute;
+}
+
+h1 {
+    font-family: 'Saddlebag';
+    position: absolute;
+    z-index: 1;
+    font-size: 6em;
+    padding-left: 20px;
+    color: white;
+}
+
+@font-face {
+    font-family: 'Saddlebag';
+    src: url('../fonts/Saddlebag.ttf');
 }
