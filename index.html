@@ -15,16 +15,22 @@
 
       var isAudioPlaying = false;
       function toggleAudio() {
-          isAudioPlaying
-            ? audio.pause()
-            : audio.play();
+          if (isAudioPlaying) {
+              audio.pause();
+              document.getElementById("toggleAudioImage").src = 'images/audio_off.png';
+          } else {
+              audio.play();
+              document.getElementById("toggleAudioImage").src = 'images/audio_on.png';
+          }
           isAudioPlaying = !isAudioPlaying;
       }
   </script>
 </head>
 
 <body>
-    <button id="toggleAudioButton" onclick="toggleAudio()">Toggle Audio</button>
+    <button id="toggleAudioButton" onclick="toggleAudio()">
+        <img id="toggleAudioImage" src="images/audio_off.png"/>
+    </button>
     <img id="title" src="images/title_1.png"/>
     <img id="sky" class="scenery" src="images/sky.png"/>
     <img id="background" class="scenery" src="images/bg_back.png"/>
