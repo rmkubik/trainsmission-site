@@ -166,13 +166,25 @@ h1 {
     }
 }
 
-#toggleAudioButton {
+.menu-bar {
     position: absolute;
-    z-index: 5;
-    border: none;
-    background-color: transparent;
     margin-left: 10px;
     margin-top: 10px;
+    z-index: 5;
+    vertical-align: top;
+}
+
+.menu-bar a {
+    position: relative;
+}
+
+.menu-bar a img {
+    width: 90px;
+}
+
+#toggleAudioButton {
+    border: none;
+    background-color: transparent;
     padding: 0;
     cursor: pointer;
 }
