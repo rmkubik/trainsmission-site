@@ -24,6 +24,33 @@
           }
           isAudioPlaying = !isAudioPlaying;
       }
+
+      var bird = 0;
+      var birdSprites = [
+          'images/pigeon_fly 1.png',
+          'images/pigeon_fly 2.png'
+      ]
+      function flapBirdImage(id) {
+          var bird = document.getElementById(id);
+          var currentFrame = bird.dataset.frame;
+          var nextFrame;
+          if (currentFrame == 0) {
+              nextFrame = 1;
+          } else {
+              nextFrame = 0;
+          }
+          bird.setAttribute('data-frame', nextFrame);
+          bird.src = birdSprites[nextFrame];
+      }
+      setInterval(function(){ flapBirdImage('bird1'); }, 200);
+      setTimeout(function() {
+          console.log('2')
+          setInterval(function(){ flapBirdImage('bird2'); }, 200);
+      }, 50);
+      setTimeout(function() {
+          console.log('3')
+          setInterval(function(){ flapBirdImage('bird3'); }, 200);
+      }, 25);
   </script>
 </head>
 
@@ -35,6 +62,13 @@
     <img id="sky" class="scenery" src="images/sky.png"/>
     <img id="background" class="scenery" src="images/bg_back.png"/>
     <img id="midground" class="scenery" src="images/bg_mid.png"/>
+
+    <div id="birds">
+        <img id="bird1" class="bird" src="images/pigeon_fly 1.png" data-frame="0">
+        <img id="bird2" class="bird" src="images/pigeon_fly 1.png" data-frame="1" style="padding: 35px;">
+        <img id="bird3" class="bird" src="images/pigeon_fly 1.png" data-frame="0">
+    </div>
+
     <img id="foreground" class="scenery" src="images/bg_fore.png"/>
     <img id="tracks" class="scenery" src="images/bg_tracks.png"/>
 

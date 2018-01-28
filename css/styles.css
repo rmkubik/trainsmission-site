@@ -46,7 +46,7 @@ h1 {
 }
 
 #train {
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     top: 97vh;
 
@@ -140,11 +140,20 @@ h1 {
 
 @keyframes leftToRight {
     from {
-
         transform: translate(-110vw, -100%);
     }
     to {
         transform: translate(390vw, -100%);
+    }
+}
+
+@keyframes rightToLeft {
+    from {
+
+        transform: translate(100vw, 0);
+    }
+    to {
+        transform: translate(-100vw, 0);
     }
 }
 
@@ -159,11 +168,23 @@ h1 {
 
 #toggleAudioButton {
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     border: none;
     background-color: transparent;
     margin-left: 10px;
     margin-top: 10px;
     padding: 0;
     cursor: pointer;
+}
+
+#birds {
+    position: absolute;
+    z-index: 2;
+}
+
+.bird {
+    animation-name: rightToLeft;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
