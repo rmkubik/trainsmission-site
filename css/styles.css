@@ -48,7 +48,40 @@ h1 {
     animation-iteration-count: infinite;
 }
 
-#train img {
+.wheels {
+    position: absolute;
+    transform: translate(0, -100%);
+    width: 100vw;
+}
+
+.wheel {
+    position: relative;
+    width: 10vw;
+
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.wheels > div {
+    display: inline-block;
+}
+
+.wheel1 {
+    margin-left: 14vw;
+}
+
+.wheel3 {
+    float: right;
+    margin-right: 20vw;
+}
+
+.wheel4 {
+    float: right;
+}
+
+.car {
     position: absolute;
     width: 100vw;
     transform: translate(0, -100%);
@@ -64,9 +97,19 @@ h1 {
 
 @keyframes leftToRight {
     from {
+
         transform: translate(-110vw, -100%);
     }
     to {
         transform: translate(290vw, -100%);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
