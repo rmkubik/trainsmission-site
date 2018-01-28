@@ -48,13 +48,16 @@ h1 {
     animation-iteration-count: infinite;
 }
 
-.wheels {
+.wheels,
+.engine-wheels {
     position: absolute;
     transform: translate(0, -100%);
     width: 100vw;
+    z-index: 3;
 }
 
 .wheel {
+    margin-top: 10vw;
     position: relative;
     width: 10vw;
 
@@ -64,7 +67,18 @@ h1 {
     animation-iteration-count: infinite;
 }
 
-.wheels > div {
+.big_wheel {
+    position: relative;
+    width: 20vw;
+
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.wheels > div,
+.engine-wheels > div {
     display: inline-block;
 }
 
@@ -72,9 +86,18 @@ h1 {
     margin-left: 14vw;
 }
 
+.engine-wheels .wheel1 {
+    margin-left: 16vw;
+}
+
 .wheel3 {
     float: right;
     margin-right: 20vw;
+}
+
+.engine-wheels .wheel3 {
+    margin-right: 13vw;
+    margin-left: 2vw;
 }
 
 .wheel4 {
@@ -87,6 +110,14 @@ h1 {
     transform: translate(0, -100%);
 }
 
+.train-exterior {
+    z-index: 2;
+}
+
+.train-interior {
+    padding-bottom: 2vw;
+}
+
 #car2 {
     transform: translate(-90vw, 0);
 }
@@ -95,13 +126,17 @@ h1 {
     transform: translate(-180vw, 0);
 }
 
+#car4 {
+    transform: translate(-270vw, 0);
+}
+
 @keyframes leftToRight {
     from {
 
         transform: translate(-110vw, -100%);
     }
     to {
-        transform: translate(290vw, -100%);
+        transform: translate(390vw, -100%);
     }
 }
 
