@@ -40,7 +40,7 @@ h1 {
 #train {
     z-index: 1;
     position: absolute;
-    top: 100vh;
+    top: 97vh;
 
     animation-name: leftToRight;
     animation-timing-function: linear;
