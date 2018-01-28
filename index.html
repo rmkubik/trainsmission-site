@@ -12,12 +12,19 @@
   <script>
       var audio = new Audio('audio/trainsmission-theme.mp3');
       audio.loop = true;
-      audio.play();
+
+      var isAudioPlaying = false;
+      function toggleAudio() {
+          isAudioPlaying
+            ? audio.pause()
+            : audio.play();
+          isAudioPlaying = !isAudioPlaying;
+      }
   </script>
 </head>
 
 <body>
-    <!-- <h1> Trainsmission </h1> -->
+    <button id="toggleAudioButton" onclick="toggleAudio()">Toggle Audio</button>
     <img id="title" src="images/title_1.png"/>
     <img id="sky" class="scenery" src="images/sky.png"/>
     <img id="background" class="scenery" src="images/bg_back.png"/>

@@ -156,3 +156,8 @@ h1 {
         transform: rotate(360deg);
     }
 }
+
+#toggleAudioButton {
+    position: absolute;
+    z-index: 1;
+}
