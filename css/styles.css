@@ -215,3 +215,29 @@ h1 {
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
+
+.foreground-items {
+    z-index: 5;
+    position: absolute;
+    top: 100vh;
+    transform: translate(0, -100%);
+    width: 100vw;
+}
+
+.cactus-large {
+    position: relative;
+    width: 14vw;
+}
+
+.cactus-medium {
+    position: relative;
+    width: 10vw;
+}
+
+.skull {
+    position: relative;
+    width: 12vw;
+    margin-top: 15vw;
+    margin-right: 4vw;
+    float: right;
+}
