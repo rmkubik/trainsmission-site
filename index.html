@@ -73,110 +73,135 @@
 </head>
 
 <body>
-    <div class="menu-bar">
-        <button id="toggleAudioButton" onclick="toggleAudio()">
-            <img id="toggleAudioImage" src="images/audio_off.png"/>
+    <div id="sky">
+        <div class="menu-bar">
+            <button id="toggleAudioButton" onclick="toggleAudio()">
+                <img id="toggleAudioImage" src="images/audio_off.png"/>
 
-        </button>
-        <a href="https://globalgamejam.org/2018/games/trainsmission-0">
-            <img src="images/ggj.png"/>
-        </a>
+            </button>
+            <a href="https://globalgamejam.org/2018/games/trainsmission-0">
+                <img src="images/ggj.png"/>
+            </a>
+            <a href="https://law5guy.itch.io/trainsmission">
+                <img src="images/play_button.png"/>
+            </a>
+        </div>
+
+
+        <img id="title" src="images/title_1.png"/>
+        <div class="background-container">
+            <img id="background" class="background" src="images/bg_back.png"/>
+            <img id="midground" class="scenery" src="images/bg_mid.png"/>
+
+            <div id="birds">
+                <img id="bird1" class="bird" src="images/pigeon_fly 1.png" data-frame="0">
+                <img id="bird2" class="bird" src="images/pigeon_fly 1.png" data-frame="1" style="padding: 35px;">
+                <img id="bird3" class="bird" src="images/pigeon_fly 1.png" data-frame="0">
+            </div>
+
+            <img id="foreground" class="scenery" src="images/bg_fore.png"/>
+        </div>
+    </div>
+
+    <div class="content">
         <a href="https://law5guy.itch.io/trainsmission">
-            <img src="images/play_button.png"/>
+            <img class="play-now" src="images/play_now.png"/>
         </a>
+        <p>
+            There's been a murder on the train, capture the criminal but make sure
+            not to accuse an innocent person!
+            This game was built in 48 hours as part of Global Game Jam 2018. The
+            theme of the jam was Transmission.
+        </p>
+        <div class="screenshots">
+            <div><img src="images/screenshots/murder.png"/></div>
+            <div><img src="images/screenshots/opening.png"/></div>
+            <div><img src="images/screenshots/bar.png"/></div>
+            <div><img src="images/screenshots/engine.png"/></div>
+        </div>
     </div>
 
-    <img id="title" src="images/title_1.png"/>
-    <img id="sky" class="scenery" src="images/sky.png"/>
-    <img id="background" class="scenery" src="images/bg_back.png"/>
-    <img id="midground" class="scenery" src="images/bg_mid.png"/>
+    <div class="footer">
+        <img id="tracks" class="scenery" src="images/bg_tracks.png"/>
+        <div class="foreground-items">
+            <img class="cactus-large" src="images/foreground_cactus_large.png"/>
+            <img class="cactus-medium" src="images/foreground_cactus_medium.png"/>
+            <img class="skull" src="images/foreground_skull.png"/>
+        </div>
 
-    <div id="birds">
-        <img id="bird1" class="bird" src="images/pigeon_fly 1.png" data-frame="0">
-        <img id="bird2" class="bird" src="images/pigeon_fly 1.png" data-frame="1" style="padding: 35px;">
-        <img id="bird3" class="bird" src="images/pigeon_fly 1.png" data-frame="0">
-    </div>
-
-    <img id="foreground" class="scenery" src="images/bg_fore.png"/>
-    <img id="tracks" class="scenery" src="images/bg_tracks.png"/>
-    <div class="foreground-items">
-        <img class="cactus-large" src="images/foreground_cactus_large.png"/>
-        <img class="cactus-medium" src="images/foreground_cactus_medium.png"/>
-        <img class="skull" src="images/foreground_skull.png"/>
-    </div>
-
-    <div id="train">
-        <div id="car1">
-            <img class="car train-exterior" src="images/train_engine.png"/>
-            <div class="engine-wheels">
-                <div class="wheel1">
-                    <img class="big_wheel" src="images/train_engine_big wheel.png"/>
-                </div>
-                <div class="wheel2">
-                    <img class="big_wheel" src="images/train_engine_big wheel.png"/>
-                </div>
-                <div class="wheel3">
-                    <img class="wheel" src="images/train_engine_small wheel.png"/>
-                </div>
-                <div class="wheel4">
-                    <img class="wheel" src="images/train_engine_small wheel.png"/>
+        <div id="train">
+            <div id="car1">
+                <img class="car train-exterior train-engine" src="images/train_engine.png"/>
+                <div class="engine-wheels">
+                    <div class="wheel1">
+                        <img class="big_wheel" src="images/train_engine_big wheel.png"/>
+                    </div>
+                    <div class="wheel2">
+                        <img class="big_wheel" src="images/train_engine_big wheel.png"/>
+                    </div>
+                    <div class="wheel3">
+                        <img class="wheel" src="images/train_engine_small wheel.png"/>
+                    </div>
+                    <div class="wheel4">
+                        <img class="wheel" src="images/train_engine_small wheel.png"/>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="car2">
-            <img class="car train-exterior" src="images/train_exterior.png"/>
-            <img class="car train-interior" src="images/train_interior_passenger.png"/>
-            <img id="train_wheels" class="car" src="images/train_wheels_base.png"/>
-            <div class="wheels">
-                <div class="wheel1">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-                <div class="wheel2">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-                <div class="wheel3">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-                <div class="wheel4">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-            </div>
-        </div>
-        <div id="car3">
-            <img class="car train-exterior" src="images/train_exterior.png"/>
-            <img class="car train-interior" src="images/train_interior_dining.png"/>
-            <img id="train_wheels" class="car" src="images/train_wheels_base.png"/>
-            <div class="wheels">
-                <div class="wheel1">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-                <div class="wheel2">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-                <div class="wheel3">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-                <div class="wheel4">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
+            <div id="car2">
+                <img class="car train-exterior" src="images/train_exterior.png"/>
+                <img class="car train-interior" src="images/train_interior_passenger.png"/>
+                <img id="train_wheels" class="car" src="images/train_wheels_base.png"/>
+                <div class="wheels">
+                    <div class="wheel1">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel2">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel3">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel4">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="car4">
-            <img class="car train-exterior" src="images/train_exterior_caboose.png"/>
-            <img class="car train-interior" src="images/train_interior_storage.png"/>
-            <img id="train_wheels" class="car" src="images/train_wheels_base.png"/>
-            <div class="wheels">
-                <div class="wheel1">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
+            <div id="car3">
+                <img class="car train-exterior" src="images/train_exterior.png"/>
+                <img class="car train-interior" src="images/train_interior_dining.png"/>
+                <img id="train_wheels" class="car" src="images/train_wheels_base.png"/>
+                <div class="wheels">
+                    <div class="wheel1">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel2">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel3">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel4">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
                 </div>
-                <div class="wheel2">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-                <div class="wheel3">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
-                </div>
-                <div class="wheel4">
-                    <img class="wheel" src="images/train_wheels_rotation.png"/>
+            </div>
+            <div id="car4">
+                <img class="car train-exterior" src="images/train_exterior_caboose.png"/>
+                <img class="car train-interior" src="images/train_interior_storage.png"/>
+                <img id="train_wheels" class="car" src="images/train_wheels_base.png"/>
+                <div class="wheels">
+                    <div class="wheel1">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel2">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel3">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
+                    <div class="wheel4">
+                        <img class="wheel" src="images/train_wheels_rotation.png"/>
+                    </div>
                 </div>
             </div>
         </div>
